@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 //adding middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 const fileupload = require("express-fileupload");
 app.use(fileupload({
